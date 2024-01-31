@@ -1,0 +1,15 @@
+<ng-template>
+
+  <div *ngIf="visible">
+    <div>Soy el contenido inicial</div>
+  </div>
+
+  <ng-template #templateLayout>
+    <h1>Hola! Soy un template :D</h1>
+  </ng-template>
+
+  <div *ngIf="visible; else templateLayout"></div>
+
+  <button (click)="mostrar()">Mostrar template</button>
+</ng-template>
+
